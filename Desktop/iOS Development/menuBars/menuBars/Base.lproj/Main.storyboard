@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="menuBars" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-Ig-1Zp">
+                                <frame key="frameInset" minY="28" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="1000 Seconds" id="0mb-U3-rSU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="v1b-ry-LNg">
+                                            <connections>
+                                                <action selector="playButton:" destination="BYZ-38-t0r" id="wu4-vj-1wS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="A4I-h6-8B0">
+                                            <connections>
+                                                <action selector="pauseButton:" destination="BYZ-38-t0r" id="Lsi-4q-5c6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgG-4m-5YK">
+                                <frame key="frameInset" height="44" maxY="8"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="+10" id="zXM-pb-VSp">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="4sZ-zL-PWj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ps3-50-7id"/>
+                                    <barButtonItem title="Reset" id="KzM-Xh-eOY">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="Cr3-EV-uqC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ELk-Xz-IFi"/>
+                                    <barButtonItem title="-10" id="BNX-mi-ogl">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="dUs-Hj-F1W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2t-eY-6dW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="Ac1-ew-luQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="TJi-zd-MVj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="L2t-eY-6dW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QoB-kk-pNp"/>
+                            <constraint firstItem="L2t-eY-6dW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJ7-FN-GKD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerValue" destination="L2t-eY-6dW" id="lrs-Z4-4Q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.75" y="36.971830985915496"/>
+        </scene>
+    </scenes>
+</document>
